@@ -1,0 +1,662 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*TIPOGRAFIAS*/
+@font-face {
+    font-family: "Bebas";
+    src: url(./tipografias/Bebas_Neue/BebasNeue-Regular.ttf);
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url(./tipografias/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+$texto1:"Bebas";
+$texto2:"Montserrat";
+
+/*COLORES*/
+$color1:#fefefe;
+$color2:#071013;
+$color3:#FCBF23;
+
+
+body{
+    background-color: $color2;
+    align-items: center;
+    justify-content: center;
+}
+
+/*PRINCIPAL*/
+header{
+    background-color: $color2;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 20px;
+
+    .container-fluid{
+        background-color: $color1;
+        font-size: 50px;    
+        text-align: center;
+
+        .logoImagen2{
+            height: 70px;
+            margin-right: 10px;
+            margin-left: 10px;
+            background-color: $color1;
+            margin: 10px;
+        }
+    }
+
+    nav{
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        word-spacing: 50px;
+        font-family: $texto2;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        margin-bottom: 20px;
+        height: 90px;
+
+        .logoImagen{
+            width: 70px;
+            height: 70px;
+        }
+
+        ul{
+            margin-left: 20px;
+            margin-right: 20px;
+
+            a{
+                text-decoration: none !important;
+                color: $color1;
+            }
+        } 
+    }
+}
+
+nav a:hover{
+    color: $color3;
+}
+
+.jumbotron{
+    height: 700px;
+    margin-top: 70px;
+    margin-bottom: 0;
+    text-align: center;
+    background-image: linear-gradient(hsl(195, 46%, 5%), hsla(0, 0%, 100%, 0.5)), url(./images/fondo2.jpg);
+    background-size: cover;
+    border-radius: 0;
+    position: relative;
+
+    .contenido{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+        .zenkai{
+            color: $color1;
+            font-family: $texto1;
+            font-size: 100px;
+        }
+    }
+    .academia{
+        color: $color1;
+        font-family: $texto1;
+        font-size: 40px;
+        padding-bottom: 20px;
+    }
+    
+    .btn{
+        padding: 15px;
+        background-color: $color3;
+        color: $color2;
+        font-family: $texto1;
+        font-style: italic;
+        font-size: 40px;
+        border: none;
+    }  
+}                                               
+
+.veni:hover{
+    color: $color1;
+}
+
+.titulo{
+    margin: 0;
+    padding: 5px;
+    align-items: center;
+
+    .nombreTitulo{
+        color: $color2;
+        background-color: $color1;
+        text-align: center;
+        font-size: 70px;
+        font-family: $texto1;
+        font-style: italic;
+        padding-top: 20px;
+        letter-spacing: 4px;
+    }
+}
+
+.programas{
+    display: grid;
+    grid-template-columns: 15% 30% 5% 30% 15%;
+    grid-template-rows: 400px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background-color: $color1;
+
+    .nombrePrograma{
+        background-image: url(./images/infantiles.JPG);
+        filter:grayscale(100);
+        background-size: cover;
+        grid-area: 1 / 2 / 2 / 3;
+        position: relative;
+        box-shadow: 5px 5px 5px $color3;
+
+        &:hover{
+            filter: grayscale(0);
+        }
+
+        .categoria{
+            color: $color1;
+            padding-left: 30px;
+            font-family: $texto1;
+            font-size: 40px;
+            letter-spacing: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-shadow: 3px 3px 0 $color3, 5px 5px 0 green, 7px 7px 0 blue, 9px 9px 0 red, 11px 11px 0 black;
+        }
+    }
+
+    .nombrePrograma2{
+        background-image: url(./images/1.JPG);
+        filter:grayscale(100);
+        background-size: cover;
+        grid-area: 1 / 4 / 2 / 5;
+        position: relative;
+        box-shadow: 5px 5px 5px $color3;
+
+        &:hover{
+            filter: grayscale(0);
+        }
+
+        .categoria2{
+            color: $color1;
+            padding-left: 30px;
+            font-family: $texto1;
+            font-size: 40px;
+            letter-spacing: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-shadow: 3px 3px 0 $color3, 5px 5px 0 green, 7px 7px 0 blue, 9px 9px 0 red, 11px 11px 0 black;
+        }
+    }
+}
+
+.seccionComentarios{
+    background-color: $color1;
+    padding-bottom: 40px;
+
+    .comentarios{
+        font-family: $texto2;
+        color: $color1; 
+        text-align: center; 
+        background: $color3; 
+        margin: 20px 10% 20px 10%; 
+        overflow: hidden; 
+        padding: 20px; 
+        border-radius: 0px 35px 0px 35px; 
+        -moz-border-radius: 0px 35px 0px 35px; 
+        -webkit-border-radius: 0px 35px 0px 35px; 
+        border: 2px solid darkgoldenrod;
+        box-shadow: 5px 5px 5px $color2;
+    }
+}
+
+/*PROGRAMAS*/
+.infantiles{
+    display: flex;
+    align-items: center;
+    padding: 30px 10% 0 10%;
+    background-color: $color1;
+
+    .infant{
+        color: $color2;
+        text-align: right;
+        font-size: 60px;
+        font-family: $texto1;
+        font-style: italic;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+    }
+
+    .edad{
+        text-align: right;
+        font-size: 40px;
+        font-family: $texto1;
+        font-style: italic;
+        color: $color3;
+        margin-right: 10%;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+    }
+
+    .niños{
+        font-family: $texto2;
+        margin: 20px 10% 10px 10%;
+        color: $color2;
+    }
+
+    .video{
+        margin-top: 30px;
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px $color2;
+    }
+}
+
+.adultos{
+    display: flex;
+    align-items: center;
+    padding: 30px 10% 10% 10%;
+    background-color: $color1;
+
+    .infant2{
+        color: $color2;
+        text-align: left;
+        font-size: 60px;
+        font-family: $texto1;
+        font-style: italic;
+        writing-mode: vertical-rl;
+    }
+
+    .edad2{
+        text-align: left;
+        font-size: 40px;
+        font-family: $texto1;
+        font-style: italic;
+        color: $color3;
+        margin-left: 10%;
+        writing-mode: vertical-rl;
+    }
+
+    .niños{
+        font-family: $texto2;
+        margin: 20px 10% 10px 10%;
+        color: $color2;
+    }
+
+    .video{
+        margin-top: 30px;
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px $color2;
+    }
+}
+
+/*GALERIA*/
+.nombreTitulo2{
+    margin-bottom: 0;
+    margin-top: 70px;
+    color: $color2;
+    background-color: $color1;
+    text-align: center;
+    font-size: 70px;
+    font-family: $texto1;
+    font-style: italic;
+    letter-spacing: 4px;
+    padding: 20px 0 20px 0;
+    align-items: center;
+}
+
+.galeria{
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    grid-template-rows: repeat(4, 450px);
+    column-gap: 50px;
+    row-gap: 50px;
+    justify-content: center;
+    text-align: center;
+    background-color: $color1;
+    padding-bottom: 80px;
+
+    div{
+        background-size: cover;
+        box-shadow: 10px 10px 10px $color2;
+    }
+
+    .img1{
+        background-image: url(./images/img1.JPG);
+    }
+    
+    .img2{
+        background-image: url(./images/img2.JPG);
+    }
+    
+    .img3{
+        background-image: url(./images/img3.JPG);
+    }
+    
+    .img4{
+        background-image: url(./images/img4.JPG);
+    }
+    
+    .img5{
+        background-image: url(./images/img5.JPG);
+    }
+    
+    .img6{
+        background-image: url(./images/img6.JPG);
+    }
+    
+    .img7{
+        background-image: url(./images/img7.JPG);
+    }
+    
+    .img8{
+        background-image: url(./images/img8.JPG);
+    }
+
+    .img9{
+        background-image: url(./images/img9.JPG);
+    }
+    
+    .img10{
+        background-image: url(./images/img10.JPG);
+    }
+    
+    .img11{
+        background-image: url(./images/img11.JPG);
+    }
+    
+    .img12{
+        background-image: url(./images/img12.JPG);
+    }
+}
+
+/*RESEÑAS*/
+.reseñas{
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    grid-template-rows: repeat(3, 250px);
+    column-gap: 50px;
+    row-gap: 50px;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    color: $color1;
+
+    .reseña1{
+        grid-area: 1 / 1 / 2 / 3;
+        background-color: hsla(43, 97%, 56%, 0.5);
+        border-radius: 20px;
+        position: relative;
+        padding: 20px;
+
+        .comentario1{
+            position: absolute;
+            top: 50%;
+            transform: translate(0,-50%);
+            padding: 20px;
+        }
+    }
+
+    .reseña2{
+        grid-area: 1 / 3 / 3 / 4;
+        background-color: rgba(0, 128, 0, 0.5);
+        display: flex;
+        align-items: center;
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    .reseña3{
+        grid-area: 2 / 1 / 4 / 2;
+        background-color: rgba(170, 25, 25, 0.5);
+        display: flex;
+        align-items: center;
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    .reseña4{
+        grid-area: 3 / 2 / 4 / 4;
+        background-color:rgba(0, 0, 205, 0.5) ;
+        position: relative;
+        border-radius: 20px;
+        padding: 20px;
+
+        .comentario4{
+            position: absolute;
+            top: 50%;
+            transform: translate(0,-50%);
+            padding: 20px;
+        }
+        
+    }
+
+    .reseña5{
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 20px;
+        padding: 20px;
+        position: relative;
+    }
+
+    .avatar{
+        height: 40px;
+        width: 40px;
+    }
+
+    .nombreTestimonio{
+        font-size: 35px;
+        font-family: $texto1;
+        text-shadow: 0.1em 0.1em 0.2em black;
+        letter-spacing: 2px;
+    }
+
+    .testimonio{
+        font-size: 14px;
+        font-family: $texto2;
+        font-style: italic;
+        text-shadow: 0.1em 0.1em 0.3em black;
+        
+    }
+}
+
+/*CONTACTO*/
+.nombreTitulo3{
+    margin-top: 70px;
+    color: $color1;
+    text-align: center;
+    font-size: 70px;
+    font-family: $texto1;
+    font-style: italic;
+    padding-top: 20px;
+    letter-spacing: 4px;
+    align-items: center;
+}
+
+.contacte{
+    text-align: center;
+    font-size: 35px;
+    font-family: $texto1;
+    font-style: italic;
+    color: $color3;
+}
+
+.contacto{
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(2,fr);
+    grid-template-rows: 400px;
+    margin-top: 20px;
+
+    .maps{
+        border-radius: 10px;
+        grid-area: 1 / 2 / 2 / 3;
+        height: 100%;
+        background-color: $color3;
+        margin-bottom: 30px;
+    }
+
+    .formulario{
+        height: 300px;
+        color: $color1;
+        font-family: $texto2;
+        border-radius: 10px;
+        grid-area: 1 / 4 / 2 / 5;
+
+        .contactenos{
+            font-family: $texto1;
+            font-size: 30px;
+            letter-spacing: 3px;
+            margin-bottom: 5px;
+            text-align: left;
+            color: $color3;
+        }
+
+        .btn2{
+            padding: 5px;
+            letter-spacing: 2px;
+            background-color: $color3;
+            color: $color2;
+            font-family: $texto1;
+            font-style: italic;
+            font-size: 20px;
+            border: 3px solid $color1;
+            text-align: center;
+        }
+    }
+}
+
+/*FOOTER*/
+footer{
+    &:hover{
+        color: $color3;
+    }
+
+    .pages{
+        font-size: 30px;
+        color: $color1;
+        padding: 20px;
+        word-spacing: 20px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .row{
+        color: $color1;
+        text-align: center;
+        justify-content: center;
+
+        h5{
+            font-family: $texto1;
+            font-weight: bold;
+            font-size: 20px;
+            letter-spacing: 4px;
+            margin-top: 10px;
+            margin-bottom: 2px;
+        }
+
+        .links{
+            text-decoration: none !important;
+            font-family: $texto2;
+            margin: auto;
+            text-align: center;
+            justify-content: space-between;
+            font-style: italic;
+        }
+    }
+
+    .pie{
+        margin-top: 20px;
+
+        .final{
+            color: $color1;
+            margin-top: 10px 0 10px 0;
+            font-family: $texto1;
+            font-style: italic;
+            font-size: 30px;
+            text-align: center;
+
+            .mirco{
+                color: $color3;
+            }
+        }
+    }
+}
+
+.whatsapp{
+    height: 40px;
+    width: 40px;
+    font-size: 80px;
+    color: green;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 70px;
+    right: 30px;
+}
+
+/*RESPONSIVE*/
+@media only screen and (max-width:1000px){
+    .reseñas{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 450px 450px 200px;
+        margin: 0 50px 0 50px;
+    }
+
+    .reseña1{
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    
+    .reseña2{
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    
+    .reseña3{
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    
+    .reseña4{
+        grid-area: 2 / 2 / 3 / 3;
+    }
+    
+    .reseña5{
+        grid-area: 3 / 1 / 4 / 3;
+    }
+
+    .nombreTitulo3{
+        margin: 0 50px 0 50px;
+    }
+}
+
+@media only screen and (max-width:850px){
+    .galeria{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(6, 450px);
+        padding: 0 50px 50px 50px;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .galeria{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12, 450px);
+        padding: 0 50px 50px 50px;
+    }
+}
+
